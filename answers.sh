@@ -32,3 +32,11 @@ UPDATE graduates SET Graduation = '8/9/2018' WHERE name= 'Layal';
  DELETE FROM students WHERE name = 'Layal';
 
 
+Joins 
+
+SELECT e.name , c.name , c.Date  FROM employees e LEFT JOIN companies c ON e.Company = c.name;
+
+SELECT e.name FROM employees e LEFT JOIN companies c ON e.Company = c.name WHERE c.Date < 2000;
+
+SELECT DISTINCT c.name FROM companies c INNER JOIN employees e ON e.Company = c.name WHERE e.Role = 'Graphic Designer';
+
